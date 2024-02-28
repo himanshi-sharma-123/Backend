@@ -19,4 +19,11 @@ app.use(
 app.use(express.urlencoded({ extended: true, limit: "16kb" })); //data from url (himanhsi+sharma)
 app.use(express.static("public")); //access public assests , everyone can see
 app.use(cookieParser()); // for doing crud operations on cookies
+
+// routes import
+import userRouter from "./routes/user.routes.js";
+
+//routes declaration
+app.use("/api/v1/users", userRouter); //prefix http://localhost:8000/api/v1/users/register
+
 export { app };
