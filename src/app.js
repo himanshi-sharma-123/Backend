@@ -19,3 +19,4 @@ app.use(
 app.use(express.urlencoded({ extended: true, limit: "16kb" })); //data from url (himanhsi+sharma)
 app.use(express.static("public")); //access public assests , everyone can see
 app.use(cookieParser()); // for doing crud operations on cookies
+export { app };
