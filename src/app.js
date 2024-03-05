@@ -23,8 +23,11 @@ app.use(cookieParser()); // for doing crud operations on cookies
 // routes import
 import userRouter from "./routes/user.routes.js";
 import videoRouter from "./routes/video.routes.js";
+import tweetRouter from "./routes/tweet.routes.js";
 
 //routes declaration
 app.use("/api/v1/users", userRouter); //prefix http://localhost:8000/api/v1/users/register
 app.use("/api/v1/videos", videoRouter);
+app.use("/api/v1/tweets", tweetRouter);
+
 export { app };
